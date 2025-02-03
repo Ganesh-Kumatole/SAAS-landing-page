@@ -1,0 +1,299 @@
+/* Initial set-up */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+:root {
+  --accent-color: #4c93ff;
+  --accent-color-dark: #2079ff;
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+/* Styling the nav... */
+nav {
+  margin-top: 10px;
+}
+
+/* Limiting the width of nav's container & centralizing it... */
+nav .container {
+  max-width: 1100px;
+  padding: 0px 20px;
+  margin: 0px auto;
+
+  display: flex; /* Standard way to build navbar */
+  justify-content: space-between;
+  align-items: center;
+
+  height: 3rem;
+}
+
+ul {
+  display: flex; /* Standard way to build navbar */
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  list-style: none;
+}
+
+ul a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: rgb(82, 82, 82);
+  font-weight: 600;
+}
+
+/* Converting <a> => Inline -> Block, to be helpful during hover */
+ul .log-in a {
+  display: block;
+  padding: 7px;
+
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #333333;
+  font-weight: 600;
+
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  color: #fff;
+}
+
+.fa-user {
+  margin-right: 5px;
+}
+
+/* Upon hovering the nav links... */
+.logo:hover {
+  cursor: pointer;
+}
+
+ul .home a:hover,
+ul .about-us a:hover,
+ul .blog a:hover {
+  color: black;
+  padding-bottom: 2px;
+  border-bottom: 4px solid var(--accent-color);
+}
+
+ul .log-in a:hover {
+  cursor: pointer;
+  background-color: var(--accent-color-dark);
+}
+
+/* Styling the Hero... */
+
+.hero {
+  background-color: rgb(245, 245, 245);
+}
+
+.hero .container {
+  max-width: 1100px;
+  margin: 0px auto 50px auto;
+  padding: 20px 20px;
+
+  background-image: url(Images/hero-bg-desktop.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  height: 490px;
+}
+
+/* Note; Creating your OWN utility-based classes */
+
+/* Note: Child's margin is reflected on the (non-semantic) parent element as well*/
+
+.hero-title-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 7px;
+
+  padding-top: 25px;
+}
+
+.hero-title-description h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+  width: 50%;
+}
+
+.hero-title-description p {
+  width: 45%;
+  line-height: 1.3;
+  color: #333;
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+}
+
+.hero-btn {
+  text-decoration: none;
+  display: inline-block; /* => Outside: Inline || Inside: Block */
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.primary-btn {
+  background-color: var(--accent-color);
+  color: white;
+  margin-right: 7px;
+}
+.primary-btn:hover {
+  background-color: var(--accent-color-dark);
+}
+
+.secondary-btn {
+  background-color: rgb(238, 238, 238);
+  color: rgb(57, 57, 57);
+}
+
+/* Styliing the VSL... */
+
+.vsl {
+  background-color: black;
+}
+
+.vsl .container {
+  max-width: 500px;
+  margin: 0px auto;
+  height: 550px;
+  gap: 1.5rem;
+  padding: 50px 0px;
+}
+
+.vsl-heading {
+  color: white;
+  font-weight: 300;
+  line-height: 1.4;
+  font-size: 1.5rem;
+  text-align: center;
+  text-wrap: balance;
+  margin-bottom: 20px;
+}
+
+.vsl .vsl-video {
+  background: url(Images/video-thumbnail.png);
+  width: 490px;
+  height: 290px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  border: 5px solid transparent;
+  border-radius: 12px;
+}
+
+.vsl .vsl-video:hover {
+  cursor: pointer;
+  border-radius: 12px;
+  animation: thumbnail-border 2s linear infinite;
+}
+
+@keyframes thumbnail-border {
+  0% {
+    border-left-color: var(--accent-color-dark);
+    border-style: ridge;
+  }
+  25% {
+    border-top-color: var(--accent-color-dark);
+    border-style: ridge;
+  }
+  50% {
+    border-right-color: var(--accent-color-dark);
+    border-style: ridge;
+  }
+  75% {
+    border-bottom-color: var(--accent-color-dark);
+    border-style: ridge;
+  }
+  100% {
+    border-left-color: var(--accent-color-dark);
+    border-style: ridge;
+  }
+}
+
+.vsl a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+
+  border: 3px solid var(--accent-color-dark);
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: white;
+
+  margin-top: 20px;
+  padding: 8px 10px;
+
+  transition: background-color 0.5s ease;
+}
+
+.vsl a:hover {
+  background-color: var(--accent-color-dark);
+}
+
+/* Testimonial */
+
+.testimonial {
+  background-color: rgb(245, 245, 245);
+}
+
+.testimonial .container {
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: 50px 20px;
+  height: 420px;
+}
+
+.testimonial-heading {
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 1.5rem;
+  text-align: center;
+  text-wrap: balance; /* New Property */
+  margin-bottom: 3rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 5px;
+}
+
+.card {
+  height: 200px;
+  width: 30%;
+  border: 2px solid var(--accent-color-dark);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.card .text {
+  font-size: 0.8rem;
+  text-wrap: balance;
+  color: rgb(40, 40, 40);
+}
+
+.client-details {
+  margin-top: 1rem;
+}
+
+.client-details .client-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.client-details .business-name {
+  font-size: 0.7rem;
+  color: rgb(50, 50, 50);
+}
