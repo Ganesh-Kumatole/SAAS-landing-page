@@ -96,12 +96,7 @@ ul .log-in a:hover {
   max-width: 1100px;
   margin: 0px auto 50px auto;
   padding: 20px 20px;
-
-  background-image: url(Images/hero-bg-desktop.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-
+  background: url(Images/hero-bg-desktop.png) no-repeat center bottom / contain;
   height: 490px;
 }
 
@@ -181,12 +176,9 @@ ul .log-in a:hover {
 }
 
 .vsl .vsl-video {
-  background: url(Images/video-thumbnail.png);
   width: 490px;
   height: 290px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background: url(Images/video-thumbnail.png) no-repeat center / contain;
 
   border: 5px solid transparent;
   border-radius: 12px;
@@ -296,4 +288,75 @@ ul .log-in a:hover {
 .client-details .business-name {
   font-size: 0.7rem;
   color: rgb(50, 50, 50);
+}
+
+/* Pricing... */
+
+.pricing {
+  background-color: black;
+  color: white;
+}
+
+.pricing .container {
+  margin: 0px auto;
+  max-width: 620px;
+  height: 800px;
+  padding-top: 50px;
+}
+
+.pricing-heading {
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.free-trial-msg {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.price-plans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 500px;
+  width: 100%;
+  margin: 3rem 0px;
+}
+
+.plan-option {
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 48%;
+}
+.free-plan {
+  height: 400px;
+}
+.paid-plan {
+  height: 100%;
+}
+
+.pricing-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgb(232, 232, 232);
+}
+
+.features-comparison {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+}
+.features-comparison:hover {
+  cursor: pointer;
 }
