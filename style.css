@@ -300,7 +300,7 @@ ul .log-in a:hover {
 .pricing .container {
   margin: 0px auto;
   max-width: 620px;
-  height: 800px;
+  height: 850px;
   padding-top: 50px;
 }
 
@@ -323,21 +323,139 @@ ul .log-in a:hover {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  height: 500px;
+  height: 550px;
   width: 100%;
   margin: 3rem 0px;
 }
 
 .plan-option {
-  border: 1px solid white;
   border-radius: 15px;
   width: 48%;
 }
 .free-plan {
-  height: 400px;
+  height: 485px;
+  padding: 30px;
+  border: 1px solid rgb(100, 100, 100);
+  color: rgb(240, 240, 240);
 }
 .paid-plan {
   height: 100%;
+  background-color: rgb(245, 245, 245);
+  color: #1d1d1d;
+  padding: 30px;
+}
+
+.freemium-heading {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.preemium-heading {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.freemium-description {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  text-wrap: balance;
+}
+.preemium-description {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+.freemium-price-details,
+.preemium-price-details {
+  margin: 1rem 0px 0.4rem;
+}
+
+.freemium-price-details h1 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  display: inline;
+}
+.preemium-price-details h1 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  display: inline;
+}
+
+.freemium-price-details p {
+  font-size: 10px;
+  color: rgb(200, 200, 200);
+  display: inline;
+}
+.preemium-price-details p {
+  font-size: 14px;
+  display: inline;
+}
+
+.freemium-divider {
+  border: 1px solid rgb(100, 100, 100);
+}
+.preemium-divider {
+  border: 1px solid rgb(199, 199, 199);
+}
+
+.free-included-msg {
+  font-size: 0.85rem;
+  margin: 1rem 0px 0.5rem;
+}
+
+.freemium-features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.7;
+
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+.preemium-features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 7px;
+  line-height: 1.5;
+
+  font-size: 0.85rem;
+}
+
+.freemium-features .feature {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+.preemium-features .feature {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.fa-check {
+  font-size: 1rem;
+}
+
+.price-plans .btn {
+  color: #ffffff;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+
+  background-color: var(--accent-color-dark);
+  border-radius: 15px;
 }
 
 .pricing-note {
