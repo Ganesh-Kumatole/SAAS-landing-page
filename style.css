@@ -475,3 +475,102 @@ ul .log-in a:hover {
 .features-comparison:hover {
   cursor: pointer;
 }
+
+/* Footer */
+
+footer .container {
+  max-width: 1000px;
+  height: 300px;
+  margin: 30px auto 5px;
+  padding: 0px 20px;
+  position: relative;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 3fr repeat(3, 1fr);
+  gap: 1rem;
+  margin: 10px 0px;
+}
+
+.footer-content ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1px;
+}
+
+.footer-content ul .heading {
+  color: black;
+  font-weight: 600;
+}
+
+.footer-content ul li a {
+  color: rgb(45, 45, 45);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding-bottom: 2px;
+}
+.footer-content ul li a:hover {
+  color: black;
+  border-bottom: 1px solid;
+}
+
+.footer-content .newsletter-form {
+  border: 1px solid rgb(142, 142, 142);
+  border-radius: 15px;
+  height: 150px;
+  width: 350px;
+  padding: 10px 15px;
+}
+.footer-content .newsletter-form h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 5px 0px;
+}
+.footer-content .newsletter-form p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.footer-content .newsletter-form input {
+  height: 35px;
+  padding: 5px;
+  margin-right: 5px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgb(136, 136, 136);
+}
+.footer-content .newsletter-form button {
+  height: 35px;
+  text-align: center;
+  padding: 5px 15px;
+  font-size: 0.8rem;
+  background-color: var(--accent-color-dark);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.social-media a {
+  color: #696969;
+}
+.social-media {
+  font-size: 0.8rem;
+}
+.social-media .linkedin {
+  margin: 0px 5px;
+}
+.social-media .linkedin:hover {
+  color: var(--accent-color-dark);
+}
+.social-media .twitter:hover {
+  color: black;
+}
+
+footer .copyright {
+  position: absolute;
+  bottom: 5px;
+  font-size: 0.7rem;
+}
