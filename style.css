@@ -300,8 +300,10 @@ ul .log-in a:hover {
 .pricing .container {
   margin: 0px auto;
   max-width: 700px;
-  height: 850px;
+  height: auto;
   padding-top: 50px;
+  padding-bottom: 20px;
+  padding: 50px 10px 20px 10px;
 }
 
 .pricing-heading {
@@ -314,6 +316,8 @@ ul .log-in a:hover {
 
 .free-trial-msg {
   text-align: center;
+  text-wrap: balance;
+  line-height: 1.7;
   font-size: 0.8rem;
   margin-bottom: 1rem;
 }
@@ -333,13 +337,13 @@ ul .log-in a:hover {
 }
 
 .free-plan {
-  height: 485px;
+  height: auto;
   padding: 30px;
   border: 1px solid rgb(100, 100, 100);
   color: rgb(240, 240, 240);
 }
 .paid-plan {
-  height: 100%;
+  height: auto;
   background-color: rgb(245, 245, 245);
   color: #000000;
   padding: 30px;
@@ -460,6 +464,8 @@ ul .log-in a:hover {
 
 .pricing-note {
   text-align: center;
+  text-wrap: balance;
+  line-height: 1.7;
   font-size: 0.8rem;
   color: rgb(232, 232, 232);
 }
@@ -472,7 +478,7 @@ ul .log-in a:hover {
 
   font-size: 0.8rem;
   font-weight: 600;
-  margin-top: 1rem;
+  margin: 20px 0px;
   letter-spacing: 0.5px;
 }
 .features-comparison:hover {
@@ -592,12 +598,25 @@ footer .copyright {
 
 /* Approach: Pick a section & make it responsive across all devices rather than trying to make all the sections responsive for a particular screen-size. */
 
+/* Responsive: Tablets */
+
 @media screen and (max-width: 800px) and (min-width: 500px) {
+  /* Pricing Section */
+
+  .price-plans {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2rem;
+  }
+  .plan-option {
+    max-width: 300px;
+  }
+
   /* Footer */
+
   footer .container {
     height: 400px;
   }
-
   .footer-content {
     grid-template-columns: none;
     grid-template-rows: none;
@@ -605,7 +624,6 @@ footer .copyright {
       "form form form"
       "company-info resources-info contact-info";
   }
-
   .newsletter-form {
     grid-area: form;
   }
@@ -620,10 +638,22 @@ footer .copyright {
   }
 }
 
+/* Responsive: Mobile */
+
 @media screen and (max-width: 500px) {
+  /* Pricing */
+
+  .price-plans {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2rem;
+  }
+  .plan-option {
+    max-width: 300px;
+  }
+
   /* Footer */
 
-  .pricing,
   .vsl,
   .testimonial,
   .hero,
@@ -640,12 +670,10 @@ footer .copyright {
     align-items: center;
     gap: 1rem;
   }
-
   .footer-content {
     grid-template-columns: 1fr;
     padding: 0px 5px;
   }
-
   .footer-content ul {
     display: flex;
     flex-direction: column;
