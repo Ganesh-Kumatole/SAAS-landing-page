@@ -6,36 +6,53 @@
   font-family: poppins;
 }
 
+/* * Use CSS Variables */
 :root {
   --accent-color: #4c93ff;
   --accent-color-dark: #2079ff;
 }
 
+html {
+  scroll-behavior: smooth; /* * Smooth scrolling, prefer adding into <html> itself as it must be applied to the entire docuement */
+  scroll-snap-type: y mandatory; /* * Snapping effect property that need to be added for parent element whose child elements need to be snapped upon finishing scrolling. */
+}
+
 body {
   background-color: rgb(245, 245, 245);
+  scroll-behavior: smooth;
 }
 
-/* Navbar -> Desktop */
+.mega-container section,
+footer {
+  scroll-snap-align: center; /* * Snapping effect property  will determine where the child elements should be snapped. */
+}
+
+/* * Every section MUST have a container */
+
+/* Navbar */
 nav {
-  margin-top: 10px;
+  padding: 5px 0px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
 }
 
-/* Limiting the width of nav's container & centralizing it... */
-nav .container {
+.nav-container {
+  position: relative;
   max-width: 1100px;
-  width: 100%;
-  padding: 0px 20px;
   margin: 0px auto;
+  padding: 0px 20px 0px 0px;
 
-  display: flex; /* Standard way to build navbar */
-  justify-content: space-between;
+  display: flex; /* * Standard way to build navbar */
+  justify-content: center;
   align-items: center;
 
   height: 3rem;
 }
 
-ul {
-  display: flex; /* Standard way to build navbar */
+.nav-container ul.section-links {
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
@@ -43,16 +60,18 @@ ul {
   list-style: none;
 }
 
-ul a {
+ul.section-links li.section-name a {
   text-decoration: none;
   font-size: 0.9rem;
   color: rgb(82, 82, 82);
   font-weight: 600;
 }
 
-/* Converting <a> => Inline -> Block, to be helpful during hover */
-ul .log-in a {
-  display: block;
+.nav-container a.log-in-btn {
+  position: absolute;
+  right: 20px;
+
+  display: inline-block; /* * Outside: Inline & Inside: Block */
   padding: 7px;
 
   text-decoration: none;
@@ -64,35 +83,24 @@ ul .log-in a {
   border-radius: 5px;
   color: #fff;
 }
-
-ul.mobile-view {
-  display: none;
-}
-
-.fa-user {
+a.log-in-btn i.fa-user {
   margin-right: 5px;
 }
 
-/* Upon hovering the nav links... */
-.logo:hover {
-  cursor: pointer;
+nav .mobile-view {
+  display: none;
 }
 
-ul .home a:hover,
-ul .about-us a:hover,
-ul .blog a:hover {
+.nav-container ul.section-links li.section-name a:hover {
   color: black;
   padding-bottom: 2px;
   border-bottom: 4px solid var(--accent-color);
 }
-
-ul .log-in a:hover {
-  cursor: pointer;
+.nav-container a.log-in-btn:hover {
   background-color: var(--accent-color-dark);
 }
 
 /* Hero-section */
-
 .hero {
   background-color: rgb(245, 245, 245);
 }
@@ -100,14 +108,12 @@ ul .log-in a:hover {
 .hero .container {
   max-width: 1100px;
   margin: 0px auto 50px;
-  padding: 20px 20px;
+  padding: 30px 20px 20px;
   background: url(Images/hero-bg-desktop.png) no-repeat center bottom / contain;
   min-height: 490px;
 }
 
-/* Note; Creating your OWN utility-based classes */
-
-/* Note: Child's margin is reflected on the (non-semantic) parent element as well*/
+/* * Note; Create your OWN utility-based classes */
 
 .hero-title-description {
   display: flex;
@@ -137,7 +143,7 @@ ul .log-in a:hover {
 
 .hero-btn {
   text-decoration: none;
-  display: inline-block; /* => Outside: Inline || Inside: Block */
+  display: inline-block;
   padding: 8px 10px;
   border-radius: 5px;
   font-weight: 500;
@@ -158,8 +164,7 @@ ul .log-in a:hover {
   color: rgb(57, 57, 57);
 }
 
-/* Styliing the VSL... */
-
+/* VSL */
 .vsl {
   background-color: black;
 }
@@ -169,7 +174,7 @@ ul .log-in a:hover {
   margin: 0px auto;
   height: auto;
   gap: 1.5rem;
-  padding: 50px 0px;
+  padding: 65px 0px 50px;
 }
 
 .vsl-heading {
@@ -245,7 +250,6 @@ ul .log-in a:hover {
 }
 
 /* Testimonial */
-
 .testimonial {
   background-color: rgb(245, 245, 245);
 }
@@ -253,7 +257,7 @@ ul .log-in a:hover {
 .testimonial .container {
   max-width: 1100px;
   margin: 0px auto;
-  padding: 50px 20px;
+  padding: 60px 20px 50px;
   height: auto;
 }
 
@@ -262,7 +266,7 @@ ul .log-in a:hover {
   line-height: 1.4;
   font-size: 1.5rem;
   text-align: center;
-  text-wrap: balance; /* New Property */
+  text-wrap: balance; /* * New Property */
   margin-bottom: 3rem;
 }
 
@@ -297,7 +301,7 @@ ul .log-in a:hover {
   color: rgb(50, 50, 50);
 }
 
-/* Pricing... */
+/* Pricing */
 
 .pricing {
   background-color: black;
@@ -310,7 +314,7 @@ ul .log-in a:hover {
   height: auto;
   padding-top: 50px;
   padding-bottom: 20px;
-  padding: 50px 10px 20px 10px;
+  padding: 65px 10px 20px 10px;
 }
 
 .pricing-heading {
@@ -514,6 +518,7 @@ footer .container {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1px;
+  list-style: none;
 }
 
 .footer-content ul .heading {
@@ -596,14 +601,12 @@ footer .copyright {
 
 /* Media Queries */
 
-/* Note: It's responsive for laptops & desktops. Need to make it responsive for tablets & mobiles. */
+/* * Mobile => 320px to 480px */
+/* * Tablets => 600px to 768px */
+/* * Laptops => 1024px to 1440px */
+/* * Ḍesktops => 1440px and beyond */
 
-/* Mobile => 320px to 480px */
-/* Tablets => 600px to 768px */
-/* Laptops => 1024px to 1440px */
-/* Ḍesktops => 1440px and beyond */
-
-/* Approach: Pick a section & make it responsive across all devices rather than trying to make all the sections responsive for a particular screen-size. */
+/* * Approach: Pick a section & make it responsive across all devices rather than trying to make all the sections responsive for a particular screen-size. */
 
 /* Responsive: Tablets */
 
@@ -692,33 +695,41 @@ footer .copyright {
 /* Responsive: Mobile */
 
 @media screen and (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+  }
+
   /* Navbar */
 
-  nav .logo {
-    height: 1.9rem;
-  }
-  nav .non-mobile-view {
+  nav .desktop-view {
     display: none;
   }
   nav .mobile-view {
     display: flex;
-    width: 170px;
-    gap: 1.2rem;
-    background-color: var(--accent-color);
+    justify-content: space-between;
+    max-width: 500px;
     padding: 0px 16px;
     border-radius: 1rem;
   }
-  nav .mobile-view i {
+  nav .mobile-view ul.section-links li.section-name i {
     color: black;
     font-size: 1rem;
   }
-  nav .mobile-view .log-in i.fa-user {
+
+  .nav-container ul.section-links li.section-name a:hover {
+    color: black;
+    padding-bottom: 0px;
+    border-bottom: none;
+  }
+
+  nav .mobile-view a.log-in-btn i.fa-user {
     margin-right: 0px;
     color: white;
   }
-  nav .mobile-view .log-in a:hover {
+  nav .mobile-view a.log-in-btn:hover {
     background-color: var(--accent-color);
   }
+
   /* Hero Section */
 
   .hero .container {

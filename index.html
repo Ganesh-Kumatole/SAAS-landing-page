@@ -13,275 +13,282 @@
     ></script>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav>
-      <!-- Container similar to below... MUST be a part of each section (except sidebar kinda scenarios) to ensure that content isn't stretched till extreme for wiiiderrr screens. And, the section remains at the center.
+    <section class="mega-container">
+      <!-- Navbar -->
+      <nav>
+        <!-- Container similar to below... MUST be a part of each section (except sidebar kinda scenarios) to ensure that content isn't stretched till extreme for wiiiderrr screens. And, the section remains at the center.
        
       Navbar's Container...-->
-      <div class="container">
-        <a href="index.html">
-          <img src="Images/logo-black.png" alt="Logo" class="logo" />
-        </a>
-        <ul class="non-mobile-view">
-          <li class="web-page home">
-            <a href="">Home</a>
-          </li>
-          <li class="web-page about-us">
-            <a href="">About us</a>
-          </li>
-          <li class="web-page blog">
-            <a href="">Blog</a>
-          </li>
-          <li class="web-page log-in">
-            <a href=""> <i class="fa-solid fa-user"></i> Log In</a>
-          </li>
-        </ul>
 
-        <ul class="mobile-view">
-          <li class="web-page home">
-            <a href=""><i class="fa-solid fa-house"></i></a>
-          </li>
-          <li class="web-page about-us">
-            <a href=""><i class="fa-solid fa-address-card"></i></a>
-          </li>
-          <li class="web-page blog">
-            <a href=""><i class="fa-solid fa-blog"></i></a>
-          </li>
-          <li class="web-page log-in">
-            <a href=""><i class="fa-solid fa-user"></i></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        <div class="desktop-view nav-container">
+          <ul class="section-links">
+            <li class="section-name hero-link"><a href="#hero">Hero</a></li>
+            <li class="section-name vsl-link"><a href="#vsl">Demo</a></li>
+            <li class="section-name testimonials-link">
+              <a href="#testimonial">Testimonials</a>
+            </li>
+            <li class="section-name pricing-link">
+              <a href="#pricing">Pricing</a>
+            </li>
+          </ul>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <section class="hero-content">
-          <div class="hero-title-description">
-            <h1 class="hero-title">
-              A New Powerful Solution to Grow your Startup. Fast!
-            </h1>
-            <p class="hero-description">
-              Organize, Collaborate, and Track Progress seamlessly with our
-              one-stop-shop startup growth tool.
-            </p>
-          </div>
-          <a href="#" class="primary-btn hero-btn">Get Started</a>
-          <a href="#" class="secondary-btn hero-btn">
-            <i class="fa-solid fa-laptop"></i>
-            Book a Demo
-          </a>
-        </section>
-      </div>
-    </section>
+          <a href="#" class="log-in-btn">
+            <i class="fa-solid fa-user"></i> Log In</a
+          >
+        </div>
 
-    <!-- VSL -->
-    <section class="vsl">
-      <div class="container">
-        <h1 class="vsl-heading">
-          See exactly how it works and get started in just less than 2 minutes
-        </h1>
-        <div
-          class="vsl-video"
-          data-aos="zoom-in"
-          data-aos-duration="1000"
-        ></div>
-        <a href="#" class="vsl-cta">Get Started</a>
-      </div>
-    </section>
+        <div class="mobile-view nav-container">
+          <ul class="section-links">
+            <li class="section-name hero-link">
+              <a href="#hero"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li class="section-name vsl-link">
+              <a href="#vsl"><i class="fa-solid fa-video"></i></a>
+            </li>
+            <li class="section-name testimonials-link">
+              <a href="#testimonial"><i class="fa-solid fa-handshake"></i></a>
+            </li>
+            <li class="section-name pricing-link">
+              <a href="#pricing"><i class="fa-solid fa-tag"></i></a>
+            </li>
+          </ul>
 
-    <!-- Testimonial -->
-    <section class="testimonial">
-      <div class="container">
-        <h1 class="testimonial-heading">
-          Don't just take our word for it, hear from the proven success stories
-          of businesses just like yours...
-        </h1>
-        <section class="cards">
-          <div class="card card1" data-aos="fade-right">
-            <p class="text">
-              "Our business has seen a signilicant increase in productivity
-              since we started using the Growth app."
-            </p>
-            <div class="client-details">
-              <p class="client-name">Katherine Smith</p>
-              <p class="business-name">Capodopera</p>
+          <a href="#" class="log-in-btn">
+            <i class="fa-solid fa-user"></i> Log In</a
+          >
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="container">
+          <section class="hero-content">
+            <div class="hero-title-description">
+              <h1 class="hero-title">
+                A New Powerful Solution to Grow your Startup. Fast!
+              </h1>
+              <p class="hero-description">
+                Organize, Collaborate, and Track Progress seamlessly with our
+                one-stop-shop startup growth tool.
+              </p>
+            </div>
+            <a href="#" class="primary-btn hero-btn">Get Started</a>
+            <a href="#" class="secondary-btn hero-btn">
+              <i class="fa-solid fa-laptop"></i>
+              Book a Demo
+            </a>
+          </section>
+        </div>
+      </section>
+
+      <!-- VSL -->
+      <section class="vsl" id="vsl">
+        <div class="container">
+          <h1 class="vsl-heading">
+            See exactly how it works and get started in just less than 2 minutes
+          </h1>
+          <div
+            class="vsl-video"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          ></div>
+          <a href="#" class="vsl-cta">Get Started</a>
+        </div>
+      </section>
+
+      <!-- Testimonial -->
+      <section class="testimonial" id="testimonial">
+        <div class="container">
+          <h1 class="testimonial-heading">
+            Don't just take our word for it, hear from the proven success
+            stories of businesses just like yours...
+          </h1>
+          <section class="cards">
+            <div class="card card1" data-aos="fade-right">
+              <p class="text">
+                "Our business has seen a signilicant increase in productivity
+                since we started using the Growth app."
+              </p>
+              <div class="client-details">
+                <p class="client-name">Katherine Smith</p>
+                <p class="business-name">Capodopera</p>
+              </div>
+            </div>
+            <div class="card card2" data-aos="fade-right" data-aos-delay="200">
+              <p class="text">
+                "As a small business owner, it's important to have a tool that
+                can help me keep track of everything. The Growth app has been a
+                lifesaver for me, allowing me to manage my contacts, schedule
+                appointments, and track progress all in one place."
+              </p>
+              <div class="client-details">
+                <p class="client-name">Johnathan Lee</p>
+                <p class="business-name">Red Bolt</p>
+              </div>
+            </div>
+            <div class="card card3" data-aos="fade-right" data-aos-delay="400">
+              <p class="text">
+                "The dashboards and reporting feature has provided valuable
+                insights into our performance and helped us make data- driven
+                decisions. It's a game changer for US."
+              </p>
+              <div class="client-details">
+                <p class="client-name">David Wilson</p>
+                <p class="business-name">Slide</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section class="pricing" id="pricing">
+        <div class="container">
+          <h1 class="pricing-heading">Pricing</h1>
+          <p class="free-trial-msg">
+            No hidden fees. Scale while you grow. Unlimited uses for free. Try
+            now.
+          </p>
+          <div class="price-plans">
+            <div class="free-plan plan-option" data-aos="fade-right">
+              <h1 class="freemium-heading">Simple</h1>
+              <p class="freemium-description">
+                Keep track of your contacts, gain valuable insights, analyse
+                live data and performance metrics.
+              </p>
+              <div class="freemium-price-details">
+                <h1 class="freemium-price">Free</h1>
+                <p class="free-obj-handling">* No Credit card required</p>
+              </div>
+              <div class="freemium-divider"></div>
+              <ul class="freemium-features">
+                <li class="feature feature1">
+                  <i class="fa-solid fa-check"></i>
+                  <span class="feature1-text">Real-time monitoring</span>
+                </li>
+                <li class="feature feature2">
+                  <i class="fa-solid fa-check"></i>
+                  <span class="feature2-text"
+                    >Track key performance indicators</span
+                  >
+                </li>
+                <li class="feature feature3">
+                  <i class="fa-solid fa-check"></i>
+                  <span class="feature3-text">Schedule appointments</span>
+                </li>
+                <li class="feature feature4">
+                  <i class="fa-solid fa-check"></i>
+                  <span class="feature4-text">
+                    Organize, delegate, and track track of every task
+                  </span>
+                </li>
+              </ul>
+              <a href="#" class="btn">Get Started Now</a>
+            </div>
+            <div class="paid-plan plan-option" data-aos="fade-left">
+              <h1 class="preemium-heading">Premium</h1>
+              <p class="preemium-description">
+                Keep track of your contacts, gain valuable insights, analyse
+                live data and performance metrics.
+              </p>
+              <div class="preemium-price-details">
+                <h1 class="preemium-price">$49</h1>
+                <p class="per month">/month</p>
+              </div>
+              <div class="preemium-divider"></div>
+              <p class="free-included-msg">
+                You'll get everything from the free plan plus...
+              </p>
+              <ul class="preemium-features">
+                <li class="feature feature1">
+                  <i class="fa-solid fa-check"></i>
+                  <span class="feature1-text">Data driven desicions</span>
+                </li>
+                <li class="feature feature2">
+                  <i class="fa-solid fa-check"></i>
+                  <span class="feature2-text">Data visualization</span>
+                </li>
+                <li class="feature feature3">
+                  <i class="fa-solid fa-check"></i>
+                  <span class="feature3-text">Schedule appointments</span>
+                </li>
+                <li class="feature feature4">
+                  <i class="fa-solid fa-check"></i>
+                  <span class="feature4-text">
+                    Store and organize contact information
+                  </span>
+                </li>
+                <li class="feature feature5">
+                  <i class="fa-solid fa-check"></i>
+                  <span class="feature5-text">
+                    Real-time communication tools to stay in touch with all your
+                    team-mates.
+                  </span>
+                </li>
+              </ul>
+              <a href="#" class="btn">Get Started Now</a>
             </div>
           </div>
-          <div class="card card2" data-aos="fade-right" data-aos-delay="200">
-            <p class="text">
-              "As a small business owner, it's important to have a tool that can
-              help me keep track of everything. The Growth app has been a
-              lifesaver for me, allowing me to manage my contacts, schedule
-              appointments, and track progress all in one place."
-            </p>
-            <div class="client-details">
-              <p class="client-name">Johnathan Lee</p>
-              <p class="business-name">Red Bolt</p>
-            </div>
+          <div class="pricing-note">
+            All prices are in USD and charged per month with applicable taxes
+            added at checkout.
           </div>
-          <div class="card card3" data-aos="fade-right" data-aos-delay="400">
-            <p class="text">
-              "The dashboards and reporting feature has provided valuable
-              insights into our performance and helped us make data- driven
-              decisions. It's a game changer for US."
-            </p>
-            <div class="client-details">
-              <p class="client-name">David Wilson</p>
-              <p class="business-name">Slide</p>
-            </div>
+          <div class="features-comparison">
+            <p>View all benefits</p>
+            <i class="fa-solid fa-arrow-down"></i>
           </div>
-        </section>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- Pricing -->
-    <section class="pricing">
-      <div class="container">
-        <h1 class="pricing-heading">Pricing</h1>
-        <p class="free-trial-msg">
-          No hidden fees. Scale while you grow. Unlimited uses for free. Try
-          now.
-        </p>
-        <div class="price-plans">
-          <div class="free-plan plan-option" data-aos="fade-right">
-            <h1 class="freemium-heading">Simple</h1>
-            <p class="freemium-description">
-              Keep track of your contacts, gain valuable insights, analyse live
-              data and performance metrics.
-            </p>
-            <div class="freemium-price-details">
-              <h1 class="freemium-price">Free</h1>
-              <p class="free-obj-handling">* No Credit card required</p>
-            </div>
-            <div class="freemium-divider"></div>
-            <ul class="freemium-features">
-              <li class="feature feature1">
-                <i class="fa-solid fa-check"></i>
-                <span class="feature1-text">Real-time monitoring</span>
-              </li>
-              <li class="feature feature2">
-                <i class="fa-solid fa-check"></i>
-                <span class="feature2-text"
-                  >Track key performance indicators</span
-                >
-              </li>
-              <li class="feature feature3">
-                <i class="fa-solid fa-check"></i>
-                <span class="feature3-text">Schedule appointments</span>
-              </li>
-              <li class="feature feature4">
-                <i class="fa-solid fa-check"></i>
-                <span class="feature4-text">
-                  Organize, delegate, and track track of every task
-                </span>
-              </li>
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <img src="Images/logo-black.png" alt="" class="brand-logo" />
+          <div class="footer-content">
+            <!-- Newletter -->
+            <form action="" class="newsletter-form">
+              <h3>Subscribe to the Newsletter</h3>
+              <p>
+                Subscribe now to receive tips on how to take your business to
+                the next level.
+              </p>
+              <div class="input-btn-wrap">
+                <input type="email" placeholder="Enter your email" />
+                <button>Subscribe</button>
+              </div>
+            </form>
+
+            <ul class="company-info">
+              <li class="heading">Company</li>
+              <li><a href="">About</a></li>
+              <li><a href="">Our Process</a></li>
+              <li><a href="">Join our team</a></li>
             </ul>
-            <a href="#" class="btn">Get Started Now</a>
-          </div>
-          <div class="paid-plan plan-option" data-aos="fade-left">
-            <h1 class="preemium-heading">Premium</h1>
-            <p class="preemium-description">
-              Keep track of your contacts, gain valuable insights, analyse live
-              data and performance metrics.
-            </p>
-            <div class="preemium-price-details">
-              <h1 class="preemium-price">$49</h1>
-              <p class="per month">/month</p>
-            </div>
-            <div class="preemium-divider"></div>
-            <p class="free-included-msg">
-              You'll get everything from the free plan plus...
-            </p>
-            <ul class="preemium-features">
-              <li class="feature feature1">
-                <i class="fa-solid fa-check"></i>
-                <span class="feature1-text">Data driven desicions</span>
-              </li>
-              <li class="feature feature2">
-                <i class="fa-solid fa-check"></i>
-                <span class="feature2-text">Data visualization</span>
-              </li>
-              <li class="feature feature3">
-                <i class="fa-solid fa-check"></i>
-                <span class="feature3-text">Schedule appointments</span>
-              </li>
-              <li class="feature feature4">
-                <i class="fa-solid fa-check"></i>
-                <span class="feature4-text">
-                  Store and organize contact information
-                </span>
-              </li>
-              <li class="feature feature5">
-                <i class="fa-solid fa-check"></i>
-                <span class="feature5-text">
-                  Real-time communication tools to stay in touch with all your
-                  team-mates.
-                </span>
-              </li>
+
+            <ul class="resources-info">
+              <li class="heading">Resources</li>
+              <li><a href="">News</a></li>
+              <li><a href="">Research</a></li>
+              <li><a href="">Recent Projects</a></li>
             </ul>
-            <a href="#" class="btn">Get Started Now</a>
+
+            <ul class="contact-info">
+              <li class="heading">Contact</li>
+              <li><a href="">hello@gmail.com</a></li>
+            </ul>
           </div>
+
+          <div class="social-media">
+            <span>Follow us: </span>
+            <a href=""><i class="fa-brands fa-linkedin-in linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter twitter"></i></a>
+          </div>
+
+          <p class="copyright">&copy; 2025 copyright. All rights reserved.</p>
         </div>
-        <div class="pricing-note">
-          All prices are in USD and charged per month with applicable taxes
-          added at checkout.
-        </div>
-        <div class="features-comparison">
-          <p>View all benefits</p>
-          <i class="fa-solid fa-arrow-down"></i>
-        </div>
-      </div>
+      </footer>
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <img src="Images/logo-black.png" alt="" class="brand-logo" />
-        <div class="footer-content">
-          <!-- Newletter -->
-          <form action="" class="newsletter-form">
-            <h3>Subscribe to the Newsletter</h3>
-            <p>
-              Subscribe now to receive tips on how to take your business to the
-              next level.
-            </p>
-            <div class="input-btn-wrap">
-              <input type="email" placeholder="Enter your email" />
-              <button>Subscribe</button>
-            </div>
-          </form>
-
-          <ul class="company-info">
-            <li class="heading">Company</li>
-            <li><a href="">About</a></li>
-            <li><a href="">Our Process</a></li>
-            <li><a href="">Join our team</a></li>
-          </ul>
-
-          <ul class="resources-info">
-            <li class="heading">Resources</li>
-            <li><a href="">News</a></li>
-            <li><a href="">Research</a></li>
-            <li><a href="">Recent Projects</a></li>
-          </ul>
-
-          <ul class="contact-info">
-            <li class="heading">Contact</li>
-            <li><a href="">hello@gmail.com</a></li>
-          </ul>
-        </div>
-
-        <div class="social-media">
-          <span>Follow us: </span>
-          <a href=""><i class="fa-brands fa-linkedin-in linkedin"></i></a>
-          <a href=""><i class="fa-brands fa-x-twitter twitter"></i></a>
-        </div>
-
-        <p class="copyright">&copy; 2025 copyright. All rights reserved.</p>
-      </div>
-    </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init(); // To initialize the AOS library.
