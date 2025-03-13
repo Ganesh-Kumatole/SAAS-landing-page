@@ -14,7 +14,7 @@
 
 html {
   scroll-behavior: smooth; /* * Smooth scrolling, prefer adding into <html> itself as it must be applied to the entire docuement */
-  scroll-snap-type: y mandatory; /* * Snapping effect property that need to be added for parent element whose child elements need to be snapped upon finishing scrolling. */
+  /* scroll-snap-type: y mandatory; */ /* * Snapping effect property that need to be added for parent element whose child elements need to be snapped upon finishing scrolling. */
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 
 .mega-container section,
 footer {
-  scroll-snap-align: center; /* * Snapping effect property  will determine where the child elements should be snapped. */
+  /* scroll-snap-align: center; */ /* * Snapping effect property  will determine where the child elements should be snapped. */
 }
 
 /* * Every section MUST have a container */
